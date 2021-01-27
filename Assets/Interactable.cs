@@ -10,7 +10,8 @@ public class Interactable : MonoBehaviour
     {
         Text,
         Quest,
-        Item
+        Item,
+        Dialogue
     };
 
     public Interaction action;
@@ -42,6 +43,7 @@ public class Interactable : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) && !inAction && directionNeeded == player.GetComponent<CharacterMovement>().direction)
             {
+                player.GetComponent<CharacterMovement>()._rb.velocity = Vector2.zero;
                 inAction = true;
                 DoAction();
             }
@@ -51,8 +53,15 @@ public class Interactable : MonoBehaviour
     void DoAction()
     {
         textBox.text = text;
+        if (action == Interaction.Dialogue)
+        {
+            
+        }
+        else
+        {
+            inAction = false;
+        }
         //Debug.Log(text);
-        StartCoroutine(ActionDuration(2f));
     }
 
     IEnumerator ActionDuration(float seconds)

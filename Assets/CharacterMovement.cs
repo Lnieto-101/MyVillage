@@ -1,16 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private Rigidbody2D _rb;
+    public Rigidbody2D _rb;
     public Animator anim;
     
     public float speed = 5f;
 
     public Text textBox;
+    public Interactable interact_props;
     
     // Start is called before the first frame update
     void Start()
@@ -28,18 +30,56 @@ public class CharacterMovement : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal"); 
         vertical = Input.GetAxis("Vertical");
-        
-        if (horizontal != 0 || vertical != 0)
+
+        if (interact_props != null)
         {
-            _rb.velocity = new Vector2(horizontal * speed, vertical * speed);
-            textBox.text = "";
+            if (!interact_props.inAction)
+            {
+                if (horizontal != 0 || vertical != 0)
+                {
+                    _rb.velocity = new Vector2(horizontal * speed, vertical * speed);
+                    textBox.text = "";
+                }
+                else
+                {
+                    _rb.velocity = Vector2.zero;
+                }
+                PlayAnimation();
+            }
         }
         else
         {
-            _rb.velocity = Vector2.zero;
+            if (horizontal != 0 || vertical != 0)
+            {
+                _rb.velocity = new Vector2(horizontal * speed, vertical * speed);
+                textBox.text = "";
+            }
+            else
+            {
+                _rb.velocity = Vector2.zero;
+            }
+            PlayAnimation();
+        }
+
+
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Interactable"))
+        {
+            interact_props = other.gameObject.GetComponent<Interactable>();
         }
         
-        PlayAnimation();
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Interactable"))
+        {
+            interact_props = null;
+        }
     }
 
     void PlayAnimation()
