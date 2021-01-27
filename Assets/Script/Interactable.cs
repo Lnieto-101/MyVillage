@@ -22,6 +22,10 @@ public class Interactable : MonoBehaviour
     public bool canAction;
     private GameObject player;
     public Text textBox;
+    public string yesDialogue;
+    public string noDialogue;
+    public GameObject answerPanel;
+    public GameObject toActivate;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,9 +43,10 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-        if (canAction)
+        if (canAction && !inAction)
         {
-            if (Input.GetKeyDown(KeyCode.E) && !inAction && directionNeeded == player.GetComponent<CharacterMovement>().direction)
+            if (Input.GetKeyDown(KeyCode.E) && !inAction &&
+                directionNeeded == player.GetComponent<CharacterMovement>().direction)
             {
                 player.GetComponent<CharacterMovement>()._rb.velocity = Vector2.zero;
                 inAction = true;
@@ -55,13 +60,31 @@ public class Interactable : MonoBehaviour
         textBox.text = text;
         if (action == Interaction.Dialogue)
         {
-            
+            answerPanel.SetActive(true);
         }
         else
         {
             inAction = false;
         }
         //Debug.Log(text);
+    }
+
+    public void YesAnswer()
+    {
+        textBox.text = yesDialogue;
+        answerPanel.GetComponent<Animator>().Play("ExitAnimation");
+        StartCoroutine(ActionDuration(1f));
+        if (toActivate != null)
+        {
+            toActivate.SetActive(true);
+        }
+    }
+
+    public void NoAnswer()
+    {
+        textBox.text = noDialogue;
+        answerPanel.GetComponent<Animator>().Play("ExitAnimation");
+        StartCoroutine(ActionDuration(2f));
     }
 
     IEnumerator ActionDuration(float seconds)

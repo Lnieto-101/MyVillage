@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: d96fbb1c5aaac7045a8706694b0cd95e
+guid: 3be34552f64b8934d93014ae33bdecff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5654165801028664890
-    second: WitchHat_0
+      213: 6492175227820887744
+    second: Mugiwara_0
   - first:
-      213: 786701163776861682
-    second: WitchHat_1
+      213: -7003609723271828244
+    second: Mugiwara_1
   - first:
-      213: 1068788386142748011
-    second: WitchHat_2
+      213: 5073302668395129175
+    second: Mugiwara_2
   - first:
-      213: -8677497572557371847
-    second: WitchHat_3
+      213: 845960013927289347
+    second: Mugiwara_3
+  - first:
+      213: 8273350442147581139
+    second: Mugiwara_4
+  - first:
+      213: 6118761762766766977
+    second: Mugiwara_5
+  - first:
+      213: 1937263642832888715
+    second: Mugiwara_6
+  - first:
+      213: 9195527337670535201
+    second: Mugiwara_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WitchHat_0
+      name: Mugiwara_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c14688392e5881b0800000000000000
-      internalID: -5654165801028664890
+      spriteID: 0cecad109f6d81a50800000000000000
+      internalID: 6492175227820887744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WitchHat_1
+      name: Mugiwara_1
       rect:
         serializedVersion: 2
         x: 16
@@ -148,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f56e435a8ceaea00800000000000000
-      internalID: 786701163776861682
+      spriteID: cec29ea301e2ece90800000000000000
+      internalID: -7003609723271828244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WitchHat_2
+      name: Mugiwara_2
       rect:
         serializedVersion: 2
         x: 32
@@ -169,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6df910ef5915de00800000000000000
-      internalID: 1068788386142748011
+      spriteID: 759abbbb5edf76640800000000000000
+      internalID: 5073302668395129175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WitchHat_3
+      name: Mugiwara_3
       rect:
         serializedVersion: 2
         x: 48
@@ -190,8 +202,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9364760eee5539780800000000000000
-      internalID: -8677497572557371847
+      spriteID: 302125c86247dbb00800000000000000
+      internalID: 845960013927289347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mugiwara_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc078e9468d0d270800000000000000
+      internalID: 8273350442147581139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mugiwara_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183c4f697653ae450800000000000000
+      internalID: 6118761762766766977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mugiwara_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b836553e40b82ea10800000000000000
+      internalID: 1937263642832888715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mugiwara_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128ee34c4631d9f70800000000000000
+      internalID: 9195527337670535201
       vertices: []
       indices: 
       edges: []

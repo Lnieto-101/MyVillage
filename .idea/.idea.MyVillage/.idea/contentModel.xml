@@ -7,10 +7,7 @@
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CharacterMovement.cs" t="Include" />
-        <e p="Coins.cs" t="Include" />
-        <e p="CoinsTextUpdate.cs" t="Include" />
-        <e p="Interactable.cs" t="Include" />
+        <e p="HatSide.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="GitHub" t="Include">
             <e p="Editor" t="Include">
@@ -20,6 +17,15 @@
               <e p="UnityAPIWrapper.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Script" t="Include">
+          <e p="AnimationEvent.cs" t="Include" />
+          <e p="ChangeSide.cs" t="Include" />
+          <e p="CharacterMovement.cs" t="Include" />
+          <e p="Coins.cs" t="Include" />
+          <e p="CoinsTextUpdate.cs" t="Include" />
+          <e p="Interactable.cs" t="Include" />
+          <e p="ShopSlot.cs" t="Include" />
         </e>
       </e>
       <e p="MyVillage.sln" t="IncludeFlat" />

@@ -7,7 +7,7 @@ public class Coins : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 50) + 10);
+        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 50) + 100);
         Destroy(gameObject);
     }
 }

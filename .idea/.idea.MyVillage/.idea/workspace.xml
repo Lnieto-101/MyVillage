@@ -11,17 +11,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HatSide.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/ShopSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Editor/2020.1.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridBrush.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CoinsTextUpdate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/CoinsTextUpdate.cs" />
         <option value="$PROJECT_DIR$/Assets/Coins.cs" />
-        <option value="$PROJECT_DIR$/Assets/CharacterMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/CharacterMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/AnimationEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChangeSide.cs" />
+        <option value="$PROJECT_DIR$/Assets/ShopSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/ShopSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/ChangeSide.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Coins.cs" />
+        <option value="$PROJECT_DIR$/Assets/HatSide.cs" />
       </list>
     </option>
   </component>
@@ -72,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611615199410</updated>
       <workItem from="1611615222343" duration="8650000" />
-      <workItem from="1611711233714" duration="3341000" />
+      <workItem from="1611711233714" duration="13143000" />
     </task>
     <servers />
   </component>
