@@ -43,7 +43,20 @@ public class Interactable : MonoBehaviour
     public Animator objectAnimator;
     public GameObject loadingBreak;
     public Image fillImage;
-    
+
+    [Header("Quest dependencies")] 
+    [Space(10)]
+    public string questText;
+
+    public int neededWood;
+    public int neededRock;
+    public int neededCoal;
+
+    public Text questBox;
+
+    public bool onQuest;
+    public GameObject inventory;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -82,6 +95,17 @@ public class Interactable : MonoBehaviour
         else if (action == Interaction.Item)
         {
             BreakObject();
+        }
+        else if (action == Interaction.Quest)
+        {
+            if (!onQuest)
+            {
+                NewQuest();
+            }
+            else if (onQuest)
+            {
+                FinishQuest();
+            }
         }
         else
         {
@@ -143,6 +167,41 @@ public class Interactable : MonoBehaviour
         textBox.text = "";
         loadingBreak.SetActive(false);
         fillImage.fillAmount = 0;
+        Destroy(gameObject);
+    }
+
+    public void NewQuest()
+    {
+        questBox.text = questText;
+        onQuest = true;
+        StartCoroutine(ActionDuration(2));
+    }
+
+    public void FinishQuest()
+    {
+        if (neededWood <= PlayerPrefs.GetInt("Wood", 0) &&
+            neededRock <= PlayerPrefs.GetInt("Rock", 0) &&
+            neededCoal <= PlayerPrefs.GetInt("Coal", 0))
+        {
+            textBox.text = "Thank you so much ! take this please.";
+            PlayerPrefs.SetInt("Wood", PlayerPrefs.GetInt("Wood", 0) - neededWood);
+            PlayerPrefs.SetInt("Rock", PlayerPrefs.GetInt("Rock", 0) - neededRock);
+            PlayerPrefs.SetInt("Coal", PlayerPrefs.GetInt("Coal", 0) - neededCoal);
+            PlayerPrefs.SetInt("Key", 1);
+            onQuest = false;
+            questBox.text = "NO QUEST FOR THE MOMENT";
+        }
+        else
+        {
+            textBox.text = "You don't have everything sorry.";
+        }
+        StartCoroutine(DestroyDelayed());
+    }
+
+    IEnumerator DestroyDelayed()
+    {
+        yield return new WaitForSeconds(2);
+        textBox.text = "";
         Destroy(gameObject);
     }
     

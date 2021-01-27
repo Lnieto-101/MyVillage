@@ -13,6 +13,8 @@ public class CharacterMovement : MonoBehaviour
 
     public Text textBox;
     public Interactable interact_props;
+
+    public GameObject inventory;
     
     // Start is called before the first frame update
     void Start()
@@ -31,9 +33,31 @@ public class CharacterMovement : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal"); 
         vertical = Input.GetAxis("Vertical");
 
-        if (interact_props != null)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (!interact_props.inAction)
+            inventory.SetActive(!inventory.activeSelf);
+        }
+
+        if (!inventory.activeSelf)
+        {
+            if (interact_props != null)
+            {
+                if (!interact_props.inAction)
+                {
+                    if (horizontal != 0 || vertical != 0)
+                    {
+                        _rb.velocity = new Vector2(horizontal * speed, vertical * speed);
+                        textBox.text = "";
+                    }
+                    else
+                    {
+                        _rb.velocity = Vector2.zero;
+                    }
+
+                    PlayAnimation();
+                }
+            }
+            else
             {
                 if (horizontal != 0 || vertical != 0)
                 {
@@ -44,21 +68,13 @@ public class CharacterMovement : MonoBehaviour
                 {
                     _rb.velocity = Vector2.zero;
                 }
+
                 PlayAnimation();
             }
         }
         else
         {
-            if (horizontal != 0 || vertical != 0)
-            {
-                _rb.velocity = new Vector2(horizontal * speed, vertical * speed);
-                textBox.text = "";
-            }
-            else
-            {
-                _rb.velocity = Vector2.zero;
-            }
-            PlayAnimation();
+            _rb.velocity = Vector2.zero;
         }
     }
 

@@ -10,6 +10,7 @@ public class ChangeSide : MonoBehaviour
     public Image charVisualizer;
     public ShopSlot actualHat;
     public HatSide hat;
+    public ChangeHat hatScript;
 
     public void SideChange(int value)
     {
@@ -30,7 +31,13 @@ public class ChangeSide : MonoBehaviour
 
     public void BuyHat()
     {
-        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 50) - actualHat.price);
-        hat.hat = actualHat.hat;
+        if (PlayerPrefs.GetInt("Money", 50) > actualHat.price)
+        {
+            PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 50) - actualHat.price);
+            hat.hat = actualHat.hat;
+            hatScript.haveHat[actualHat.hatId] = true;
+            hatScript.myHats.Add(hatScript.hats[actualHat.hatId]);
+            actualHat.gameObject.SetActive(false);
+        }
     }
 }
