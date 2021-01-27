@@ -11,13 +11,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/ChangeScene.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FollowCursor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HatSide.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PickItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UpdateText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/ShopSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Editor/2020.1.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridBrush.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -30,13 +28,17 @@
         <option value="$PROJECT_DIR$/Assets/ChangeSide.cs" />
         <option value="$PROJECT_DIR$/Assets/ShopSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ShopSlot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ChangeSide.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Coins.cs" />
         <option value="$PROJECT_DIR$/Assets/HatSide.cs" />
         <option value="$PROJECT_DIR$/Assets/ChangeScene.cs" />
         <option value="$PROJECT_DIR$/Assets/FollowCursor.cs" />
         <option value="$PROJECT_DIR$/Assets/InventorySlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/BreakAndDrop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/CharacterMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/PickItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/UpdateText.cs" />
       </list>
     </option>
   </component>
@@ -87,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611615199410</updated>
       <workItem from="1611615222343" duration="8650000" />
-      <workItem from="1611711233714" duration="20282000" />
+      <workItem from="1611711233714" duration="26998000" />
     </task>
     <servers />
   </component>
@@ -98,5 +100,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2142" y="113" width="1402" height="1066" key="dock-window-1" timestamp="1611743837694">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2142" y="113" width="1402" height="1066" key="dock-window-1/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@1920.0.1920.1080" timestamp="1611743837694" />
   </component>
 </project>

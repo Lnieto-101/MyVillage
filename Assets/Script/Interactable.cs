@@ -13,19 +13,36 @@ public class Interactable : MonoBehaviour
         Item,
         Dialogue
     };
+    
+    private GameObject player;
 
+    [Header("Basic need")]
     public Interaction action;
-    [Tooltip("0 = Bottom\n1 = Right\n2 = Top\n3 = Left")]
+    [Tooltip("-1 = any\n0 = Bottom\n1 = Right\n2 = Top\n3 = Left")]
     public int directionNeeded;
     public string text;
+    [HideInInspector]
     public bool inAction;
+    [HideInInspector]
     public bool canAction;
-    private GameObject player;
+    
+    
     public Text textBox;
+    
+    [Header("Dialogue dependencies")]
+    [Space(10)]
     public string yesDialogue;
     public string noDialogue;
     public GameObject answerPanel;
     public GameObject toActivate;
+    
+    [Header("Item dependencies")]
+    [Space(10)]
+    public float breakTime;
+    public GameObject dropPrefab;
+    public Animator objectAnimator;
+    public GameObject loadingBreak;
+    public Image fillImage;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -46,7 +63,7 @@ public class Interactable : MonoBehaviour
         if (canAction && !inAction)
         {
             if (Input.GetKeyDown(KeyCode.E) && !inAction &&
-                directionNeeded == player.GetComponent<CharacterMovement>().direction)
+                (directionNeeded == player.GetComponent<CharacterMovement>().direction || directionNeeded == -1))
             {
                 player.GetComponent<CharacterMovement>()._rb.velocity = Vector2.zero;
                 inAction = true;
@@ -61,6 +78,10 @@ public class Interactable : MonoBehaviour
         if (action == Interaction.Dialogue)
         {
             answerPanel.SetActive(true);
+        }
+        else if (action == Interaction.Item)
+        {
+            BreakObject();
         }
         else
         {
@@ -93,4 +114,36 @@ public class Interactable : MonoBehaviour
         inAction = false;
         textBox.text = "";
     }
+
+    public void BreakObject()
+    {
+        loadingBreak.SetActive(true);
+        fillImage.fillAmount = 0;
+        StartCoroutine(BreakTiming(breakTime));
+    }
+
+    IEnumerator BreakTiming(float seconds)
+    {
+        while (seconds > 0)
+        {
+            objectAnimator.enabled = true;
+            objectAnimator.Play("BreakObject", -1, 0f);
+            fillImage.fillAmount += 1 / breakTime;
+            seconds -= 1;
+            yield return new WaitForSeconds(1);
+        }
+
+        if (dropPrefab != null)
+        {
+            GameObject dropInstance = Instantiate(dropPrefab);
+            dropInstance.transform.position = transform.position;
+        }
+        
+        inAction = false;
+        textBox.text = "";
+        loadingBreak.SetActive(false);
+        fillImage.fillAmount = 0;
+        Destroy(gameObject);
+    }
+    
 }

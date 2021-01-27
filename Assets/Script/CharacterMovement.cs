@@ -60,9 +60,6 @@ public class CharacterMovement : MonoBehaviour
             }
             PlayAnimation();
         }
-
-
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -71,7 +68,6 @@ public class CharacterMovement : MonoBehaviour
         {
             interact_props = other.gameObject.GetComponent<Interactable>();
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D other)

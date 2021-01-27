@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7091278442726177235}
   - component: {fileID: 8951728280765250107}
   - component: {fileID: 3765052673185138251}
+  - component: {fileID: 940603907}
+  - component: {fileID: 940603908}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7091278442726177237}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.8, y: -9.85, z: 16.64951}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -116,3 +118,49 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.5}
   serializedVersion: 2
   m_Radius: 1
+--- !u!95 &940603907
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7091278442726177237}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a901bd37792d51e49a0f80bfa7b94b00, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &940603908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7091278442726177237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441eb6af92e7e3443a5dd83cf5c80642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: 2
+  directionNeeded: -1
+  text: I'm gonna break this tree !
+  inAction: 0
+  canAction: 0
+  textBox: {fileID: 0}
+  yesDialogue: 
+  noDialogue: 
+  answerPanel: {fileID: 0}
+  toActivate: {fileID: 0}
+  breakTime: 3
+  dropPrefab: {fileID: 8138288827425307487, guid: a8daab1fa7f404f4d9637d002fa29f09, type: 3}
+  objectAnimator: {fileID: 940603907}
+  loadingBreak: {fileID: 0}
+  fillImage: {fileID: 0}
