@@ -11,10 +11,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/ChangeScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FollowCursor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HatSide.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/ShopSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Editor/2020.1.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridBrush.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -31,6 +34,9 @@
         <option value="$PROJECT_DIR$/Assets/Script/ChangeSide.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Coins.cs" />
         <option value="$PROJECT_DIR$/Assets/HatSide.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChangeScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/FollowCursor.cs" />
+        <option value="$PROJECT_DIR$/Assets/InventorySlot.cs" />
       </list>
     </option>
   </component>
@@ -81,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611615199410</updated>
       <workItem from="1611615222343" duration="8650000" />
-      <workItem from="1611711233714" duration="13143000" />
+      <workItem from="1611711233714" duration="20282000" />
     </task>
     <servers />
   </component>
