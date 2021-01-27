@@ -11,11 +11,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/ShopSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Editor/2020.1.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridBrush.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChangeHat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChangeClothes.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/ShopSlot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Editor/2020.1.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridBrush.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -38,11 +38,11 @@
         <option value="$PROJECT_DIR$/Assets/Script/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/AnimationEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ChangeScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/ChangeClothes.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ShopSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/CharacterMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/ChangeHat.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ChangeSide.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChangeClothes.cs" />
       </list>
     </option>
   </component>
@@ -93,7 +93,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611615199410</updated>
       <workItem from="1611615222343" duration="8650000" />
-      <workItem from="1611711233714" duration="38609000" />
+      <workItem from="1611711233714" duration="38662000" />
+      <workItem from="1611767467228" duration="301000" />
     </task>
     <servers />
   </component>
